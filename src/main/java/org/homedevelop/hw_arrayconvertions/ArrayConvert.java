@@ -5,6 +5,21 @@ import java.util.Scanner;
 
 public class ArrayConvert {
 
+    public static boolean areEqual(int[]first, int[]second){
+        boolean check = true;
+        if (first.length == second.length) {
+            for (int i = 0; i < first.length; i++) {
+                if (first[i] != second[i]) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+            else {
+                check = false;
+            }
+            return check;
+        }
 
     public static int getMiddleNumb(int[] array) {
         int sum = 0;
