@@ -5,6 +5,23 @@ import java.util.Scanner;
 
 public class ArrayConvert {
 
+    public static int getMedian(int[] array) {
+        int median = 0;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int s = 0; s < array.length - 1; s++) {
+                if (array[s] > array[s + 1]) {
+                    int temp = array[s];
+                    array[s] = array[s + 1];
+                    array[s + 1] = temp;
+                }
+            }
+            int a = array.length / 2;
+            int b = array.length / 2 + 1;
+            median = (a + b) / 2;
+        }
+        return median;
+    }
+
     public static boolean areEqual(int[]first, int[]second){
         boolean check = true;
         if (first.length == second.length) {
