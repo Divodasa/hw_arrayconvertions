@@ -15,10 +15,19 @@ public class ArrayConvert {
                     array[s + 1] = temp;
                 }
             }
-            int a = array.length / 2;
-            int b = array.length / 2 + 1;
-            median = (a + b) / 2;
         }
+        for (int i = 0; i < array.length; i++) {
+            if (array.length == 100) {
+                median = (array[49] + array[50]) / 2;
+            }
+            else if (array.length == 500) {
+                median = (array[249] + array[250]) / 2;
+            }
+            else {
+                median = (array[499] + array[500]) / 2;
+            }
+        }
+        printArray(array);
         return median;
     }
 

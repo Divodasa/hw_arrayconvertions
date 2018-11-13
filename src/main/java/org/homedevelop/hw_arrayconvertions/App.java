@@ -4,10 +4,11 @@ import static org.homedevelop.hw_arrayconvertions.ArrayConvert.*;
 
 public class App {
     public static void main(String[] args) {
+      String newLine = System.getProperty("line.separator");
 
-      System.out.println("Медиана в случайном массиве из 100 чисел в диапазоне 100 элементов = "+getMedian(getRandomArray(100, 100)));
-      System.out.println("Медиана в случайном массиве из 500 чисел в диапазоне 100 элементов = "+getMedian(getRandomArray(500, 100)));
-      System.out.println("Медиана в случайном массиве из 1000 чисел в диапазоне 100 элементов = "+getMedian(getRandomArray(1000, 100)));
+      System.out.println(newLine + "Медиана в случайном массиве из 100 чисел в диапазоне 100 элементов = "+getMedian(getRandomArray(100, 100)));
+      System.out.println(newLine + "Медиана в случайном массиве из 500 чисел в диапазоне 100 элементов = "+getMedian(getRandomArray(500, 100)));
+      System.out.println(newLine + "Медиана в случайном массиве из 1000 чисел в диапазоне 100 элементов = "+getMedian(getRandomArray(1000, 100)));
 
       int[] array = new int[]{112, 221, 348, 56, 78, 33};
       int[] array1 = new int[]{112, 221, 348, 56, 78, 33};
@@ -39,6 +40,5 @@ public class App {
       System.out.println("Среднне значение массива = " + getMiddleNumb(getrandomarray2));
       countEvenAndOdd(getrandomarray2);
 
-
-    }
+  }
 }
